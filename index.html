@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+<header> <div id="nav-Logo">
+  <h1><a  href="index.html"><img src="https://img.icons8.com/ios/50/000000/todo-list--v1.png"/> Resturant</a> </h1>
+</div>
+  <nav>
+      <ul>
+          <li><a href="about.html">About us</a></li>
+          
+          <li><a href="#">Contact us</a></li>
+      </ul>
+  </nav>
+</header>
+<main>
+
+  <form id="formID">
+    <div class="Contact__Card">
+      <div class="Input__Container">
+        <label for="foodName" class="Label" >Food</label>
+        <input
+          name="foodName"
+          class="Input"
+          type="text"
+          placeholder="What would you like to add?"
+          id="foodName"
+          required
+        />
+      </div>
+
+  <div class="input__Container">
+    <label for="foodType">Choose Food type:</label>
+<select class="Input" id="foodType" name="foodlist">
+  <option value="Fruit and vegetables">Fruit and vegetables</option>
+  <option value="Starchy food">Starchy food</option>
+  <option value="Dairy">Dairy</option>
+  <option value="Protein">Protein</option>
+  <option value="Fat">Fat</option>
+</select></div>
+
+      <div class="Input__Container">
+        <label for="price" class="Label">price</label>
+        <input type="text" min="1" step="any"  class="Input" id="foodPrice" required/>
+
+        
+      </div>
+      <br>
+      <div class="Input__Container">
+       
+        <input type="submit" value="Submit"  class="Input"/>
+
+        
+      </div>
+  
+      
+      
+    </div>
+  </form>
+
+<br>
+  <table id="fTable">
+    <tr id="hdrTable">
+      
+    </tr>
+ 
+  
+    
+  </table>
+
+</main>
+<footer> 
+  <div>
+    <h2 class="footer__headline">Pages</h2>
+    <ul class="footer__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        
+    </ul>
+  </div>
+
+  <div>
+    <h2 class="footer__headline">Location</h2>
+    <ul class="footer__list">
+        <li>Amman, Jordan</li>
+        <li>Phone : 07123456789</li>
+       
+    </ul>
+  </div>
+  <div>
+    <h2 class="footer__headline">Social Media</h2>
+    <ul class="footer__list">
+    
+
+      <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+     <li><a href=""><i class="fab fa-twitter"></i></a></li>
+     <li><a href=""><i class="fab fa-instagram"></i></a></li> 
+
+    </ul>
+  </div>
+</footer>
+<div class="copyDiv">
+  &copy; Suhaib Alnaji
+</div>
+<script src=./app.js></script>
+</body>
+</html>
