@@ -3,21 +3,21 @@
 
 const fdTable = document.getElementById('fTable');
 const tableHead = document.getElementById('hdrTable');
-var AllFood = [];
+var allFood = [];
 
-function Food(foodName, foodType, price) {
+function food(foodName, foodType, price) {
   this.foodName = foodName;
   this.foodType = foodType;
   this.price = price;
-  AllFood.push(this);
+  allFood.push(this);
 }
-Food.prototype.fID = function () {
+food.prototype.fID = function () {
   this.id = Math.floor(1111 + Math.random() * 9999);
 };
 
+table();
 
-
-
+function table() {
   let headerID = document.createElement("th");
   headerID.textContent = "ID";
 
@@ -30,13 +30,13 @@ Food.prototype.fID = function () {
   let headerPrice = document.createElement("th");
   headerPrice.textContent = "price";
 
-  tableHead.appendChild(headerID);
-  tableHead.appendChild(headerName);
-  tableHead.appendChild(headerType);
-  tableHead.appendChild(headerPrice);
+  hdrTable.appendChild(headerID);
+  hdrTable.appendChild(headerName);
+  hdrTable.appendChild(headerType);
+  hdrTable.appendChild(headerPrice);
+}
 
-
-Food.prototype.Render = function () {
+food.prototype.Render = function () {
   let row = document.createElement("tr");
   let id = document.createElement("td");
   let name = document.createElement("td");
@@ -53,24 +53,26 @@ Food.prototype.Render = function () {
   row.appendChild(type);
   row.appendChild(price);
 
-  fdTable.appendChild(row);
-};
+  fTable.appendChild(row);
 
+};
 getData();
 
-function getData() {
+function getData(){
   let retrivedData = localStorage.getItem("stringifiedData");
   let parsedData = JSON.parse(retrivedData);
   if(parsedData!=null){
   for (let i = 0; i < parsedData.length; i++) {
-    let newFood = new Food.food(
+    let newFoodOP = new food(
       parsedData[i].foodName,
       parsedData[i].foodType,
       parsedData[i].price
     );
+   
   }
-  }
-  for (let i = 0; i < AllFood.length; i++) {
-    AllFood[i].Render();
-  }
+}
+for (let i = 0; i < allFood.length; i++) {
+  allFood[i].Render();
+}
+    console.log(allFood);
 }

@@ -1,4 +1,5 @@
 "use strict";
+
 var allFood = [];
 function food(foodName, foodType, price) {
   this.foodName = foodName;
