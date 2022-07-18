@@ -59,7 +59,7 @@ food.prototype.Render = function () {
 getData();
 
 function getData(){
-  let retrivedData = localStorage.getItem("stringifiedData");
+  let retrivedData = localStorage.getItem("Food");
   let parsedData = JSON.parse(retrivedData);
   if(parsedData!=null){
   for (let i = 0; i < parsedData.length; i++) {
