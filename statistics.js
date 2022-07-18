@@ -67,8 +67,9 @@ function getData(){
       parsedData[i].foodType,
       parsedData[i].price
     );
-    newFoodOP.fID();
 
+
+    newFoodOP.fID();
   }
 }
   
