@@ -1,4 +1,3 @@
-
 "use strict";
 
 const fdTable = document.getElementById('fTable');
@@ -68,9 +67,11 @@ function getData(){
       parsedData[i].foodType,
       parsedData[i].price
     );
-   
+    newFoodOP.fID();
+
   }
 }
+  
 for (let i = 0; i < allFood.length; i++) {
   allFood[i].Render();
 }
